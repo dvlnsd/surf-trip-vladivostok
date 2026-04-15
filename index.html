@@ -6,177 +6,170 @@
 <title>Серф-трип во Владивосток — Илья Чайка</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: #0b0c10;
-  color: #eaeaea;
-  line-height: 1.6;
+  background: #fff;
+  color: #111;
+  line-height: 1.7;
 }
 
 section {
-  padding: 80px 20px;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 120px 20px;
 }
 
-h1, h2, h3 {
-  font-weight: 500;
-  letter-spacing: -0.02em;
-}
-
-h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-}
+h1 { font-size: 42px; margin-bottom: 20px; }
+h2 { font-size: 28px; margin-bottom: 30px; }
 
 p {
-  margin-bottom: 16px;
-  color: #cfcfcf;
+  max-width: 640px;
+  margin-bottom: 18px;
 }
 
 .hero {
   height: 100vh;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: linear-gradient(180deg, #0b0c10 0%, #11131a 100%);
+  align-items: center;
+  color: white;
 }
 
-.hero p {
-  max-width: 600px;
-  font-size: 18px;
+.hero img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
 }
 
 .btn {
-  margin-top: 30px;
   display: inline-block;
+  margin-top: 30px;
   padding: 14px 28px;
-  border: 1px solid #eaeaea;
+  border: 1px solid #111;
+  color: #111;
   text-decoration: none;
-  color: #eaeaea;
-  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: #eaeaea;
-  color: #0b0c10;
+  background: #111;
+  color: #fff;
 }
 
-.grid {
+.gallery {
   display: grid;
   gap: 20px;
+  margin-top: 40px;
 }
 
-.grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.gallery img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
 }
 
-.block {
-  border-top: 1px solid #2a2c35;
-  padding-top: 20px;
+.form {
+  max-width: 500px;
 }
 
-.quote {
-  font-style: italic;
-  color: #aaa;
-}
-
-.footer {
-  text-align: center;
-  padding: 60px 20px;
-  border-top: 1px solid #2a2c35;
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 1px solid #ddd;
 }
 </style>
-
 </head>
 
 <body>
 
 <section class="hero">
-  <h1>Серфинг во Владивостоке как закрытый опыт</h1>
-  <p>Небольшая группа, холодная вода и работа с вниманием. Формат для тех, кто ищет не отдых, а смену состояния.</p>
-  <a href="#" class="btn">Запросить программу</a>
+  <img src="hero.jpg">
+  <div class="hero-content">
+    <h1>Серф-трип во Владивосток</h1>
+    <p>Восемь дней, в которых сочетаются город, океан и работа с вниманием.</p>
+    <a href="#form" class="btn">Получить программу</a>
+  </div>
 </section>
 
 <section>
-  <h2>Это не для всех</h2>
-  <div class="grid grid-3">
-    <div class="block">Это не массовый серф-кэмп и не туристический формат</div>
-    <div class="block">Физически и психологически требовательный опыт</div>
-    <div class="block">Не подойдёт тем, кто ищет лёгкое развлечение</div>
+  <h2>Как проходит поездка</h2>
+
+  <p><strong>20 сентября — день заезда.</strong> Мы знакомимся с Владивостоком: смотрим на город с воды на SUP-бордах и с высоты, поднимаемся на фуникулёре, проезжаем по мостам на остров Русский.</p>
+
+  <p>Гуляем по старым кварталам, где когда-то находился китайский “город в городе”, пробуем местную кухню.</p>
+
+  <p>После этого выезжаем на побережье Японского моря в Хасанском районе — место, где заканчивается Россия и начинается Северная Корея.</p>
+
+  <p>Там мы проведём около пяти дней: будем жить в эко-резорте, в деревянных домах, с завтраками, баней и подогреваемым бассейном.</p>
+
+  <p>Фокус — на природе и воде: серфинг, сапбординг, снорклинг, морские прогулки, рыбалка и наблюдение за морскими котиками.</p>
+
+  <p><strong>27 сентября</strong> возвращаемся во Владивосток, ужинаем, гуляем по вечернему городу и готовимся к вылету.</p>
+
+  <p>План гибкий: мы подстраиваемся под свелл и погодные условия.</p>
+
+  <div class="gallery">
+    <img src="primorye1.jpg">
+    <img src="primorye2.jpg">
   </div>
 </section>
 
 <section>
   <h2>Илья Чайка</h2>
   <p>
-    Илья Чайка — профессиональный серфер и коуч, работающий с взрослыми учениками, для которых серфинг — инструмент работы с вниманием, телом и состоянием.
+    Профессиональный серфер и коуч. Работает с взрослыми учениками, для которых серфинг — это не развлечение, а способ работы с вниманием и состоянием.
   </p>
   <p>
-    Его подход сформирован на стыке спортивной практики и работы с людьми с высокой нагрузкой — предпринимателями, управленцами, специалистами.
+    Комментирует темы серфинга и концентрации в медиа, включая Forbes и Men Today.
   </p>
-  <p>
-    Он выступает и комментирует темы серфинга, концентрации и работы с телом в таких изданиях, как Forbes, Men Today, «Вокруг света» и Чемпионат.
-  </p>
+
+  <div class="gallery">
+    <img src="ilya.jpg">
+  </div>
 </section>
 
 <section>
-  <h2>Опыт</h2>
-  <p>Холодная вода, в которой невозможно быть рассеянным.</p>
-  <p>Океан, который не прощает автоматизма.</p>
-  <p>Концентрация, которая собирается через тело, а не через усилие.</p>
+  <h2>Условия</h2>
+  <p><strong>Стоимость:</strong> 125 000 ₽ при двухместном размещении</p>
+
+  <p><strong>Включено:</strong></p>
+  <p>Проживание с завтраками</p>
+  <p>Серфинг и сап с оборудованием</p>
+  <p>Морские прогулки и рыбалка</p>
+  <p>Все передвижения</p>
 </section>
 
 <section>
-  <h2>Почему Владивосток</h2>
-  <p>
-    В отличие от Бали и других перегруженных направлений, здесь нет толп, нет очередей на волну и нет ощущения “туристического продукта”.
-  </p>
-  <p>
-    Это край географии, холодная вода и условия, в которых серфинг становится дисциплиной, а не развлечением.
-  </p>
+  <h2>Что взять с собой</h2>
+  <p>Гидрокостюм 4/3 мм (или сообщить размер)</p>
+  <p>Удобную одежду для природы</p>
+  <p>Паурбэнк</p>
 </section>
 
-<section>
-  <h2>Отзывы</h2>
-  <p class="quote">“Я приехал за опытом, а получил системную перезагрузку внимания.”</p>
-  <p class="quote">“Это не про серфинг, это про состояние, в котором начинаешь работать иначе.”</p>
-</section>
+<section id="form">
+  <h2>Подать заявку</h2>
 
-<section>
-  <h2>Формат</h2>
-  <p>Небольшая группа</p>
-  <p>Фиксированные даты</p>
-  <p>Участие по отбору</p>
-</section>
-
-<section>
-  <h2>Условия участия</h2>
-  <p>Стоимость участия — от $1600</p>
-  <p>Финальные детали предоставляются после заявки</p>
-</section>
-
-<section>
-  <h2>FAQ</h2>
-  <p><strong>Нужен ли опыт?</strong><br>Нет, но важна готовность к нагрузке</p>
-  <p><strong>Холодно ли?</strong><br>Да. Это часть процесса</p>
-  <p><strong>Безопасно ли?</strong><br>Да, при соблюдении инструкций</p>
-</section>
-
-<section class="footer">
-  <h2>Оставить заявку</h2>
-  <a href="#" class="btn">Подать заявку</a>
+  <form action="https://formspree.io/f/YOUR_ID" method="POST" class="form">
+    <input type="text" name="name" placeholder="Имя" required>
+    <input type="text" name="contact" placeholder="Контакт" required>
+    <textarea name="message" placeholder="Коротко о себе"></textarea>
+    <button type="submit">Отправить</button>
+  </form>
 </section>
 
 </body>
